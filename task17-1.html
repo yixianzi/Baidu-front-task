@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="first-number" type="text" value=" " placeholder="第一个数字">
+    <input id="second-number" type="text" value=" " placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+//         var firstNumber=Number(document.getElementById("first-number").value);
+//         var secondNumber=Number(document.getElementById("second-number").value);
+        document.getElementById("add-btn").onclick=function add(){
+            var firstNumber=Number(document.getElementById("first-number").value);
+            var secondNumber=Number(document.getElementById("second-number").value);
+            if((document.getElementById("first-number").value==" ")&&(document.getElementById("second-number").value==" ")){
+                alert("输入不能为空");
+            }
+            else{
+      
+
+            
+           if(isNaN(firstNumber)==false&&isNaN(secondNumber)==false){
+               var sum=firstNumber+secondNumber;
+               document.getElementById("result").innerHTML=sum;
+
+           }
+           else{
+               alert("请输入数字");
+           }
+            }
+        
+        
+        // if(isNaN(firstNumber)){
+        //     alert("请输入数字");
+        // }
+        // if(isNaN(secondNumber)){
+        //     alert("请输入数字");
+        // }
+        }
+
+        
+    </script>
+</body>
+</html>
